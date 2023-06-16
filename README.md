@@ -98,9 +98,11 @@ Install this project with:
 ### Usage
 
 To run the project, execute the following command:
-
+Postgres with a username/password, modify the
+config/database.yml file to contain the username/password that you specified
 <ul>
-<li>rails server</li>
+  <li>rake db:create</li>
+  <li>rails server</li>
 </ul>
 
 ### Run tests

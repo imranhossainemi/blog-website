@@ -75,6 +75,7 @@ In order to run this project you need:
 
 <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+  <li><a href="https://rubyonrails.org/">Ruby on rails</a></li>
   </ul>
   
 ### Setup
@@ -99,7 +100,7 @@ Install this project with:
 To run the project, execute the following command:
 
 <ul>
-<li>ruby main.rb</li>
+<li>rails server</li>
 </ul>
 
 ### Run tests

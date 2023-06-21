@@ -1,1 +1,16 @@
+<div class = 'user'>
 <h1> Welcome to Users List</h1>
+<div class = 'user_container'>
+<% @users.each do |user|%>
+<div class = 'user_row'>
+<div class = 'user_image'>
+
+</div>
+<div class = 'user_block'>
+<h3><%= link_to user.name, user_path(user)  %></h3>
+<p>Number of Posts = <%=user.posts.count %></p>
+</div>
+</div>
+<% end %>
+</div>
+</div>

@@ -1,2 +1,33 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class = 'post'>
+<h2> Single Post Details</h2>
+<div class = 'home'><%= link_to 'Home', root_path %></div>
+<div class = 'post_container'>
+<div class = 'user_posts'>
+<h3> <%= @post.title%></h3>
+<p class = 'counters'> Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+<p><%= @post.text %><p>
+</div>
+</div>
+<div class = 'post_comments'>
+ <% @post.comments.each do |comment| %>
+ <p><%= comment.author.name%>: <%= comment.text%></p>
+<%end%>
+</div>
+
+</div><div class = 'post'>
+<h2> Single Post Details</h2>
+<div class = 'home'><%= link_to 'Home', root_path %></div>
+<div class = 'post_container'>
+<div class = 'user_posts'>
+<h3> <%= @post.title%></h3>
+<p class = 'counters'> Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+<p><%= @post.text %><p>
+</div>
+</div>
+<div class = 'post_comments'>
+ <% @post.comments.each do |comment| %>
+ <p><%= comment.author.name%>: <%= comment.text%></p>
+<%end%>
+</div>
+
+</div>

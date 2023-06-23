@@ -8,4 +8,3 @@ class User < ApplicationRecord
     @recent_posts = @user.three_recent_posts
   end
 end
-end

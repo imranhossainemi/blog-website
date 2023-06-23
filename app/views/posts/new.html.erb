@@ -1,0 +1,21 @@
+<div class = 'new_post'>
+<h2>Create New Post</h2>
+<div class = "back_to_posts">
+<%= link_to 'Back to Posts', posts_path %>
+</div>
+<div class = "add_new_post">
+<%= form_with model: @post do |form| %>
+<%= form.label :title %>
+<div class = "new_post_title">
+  <%= form.text_field :title %>
+  </div>
+  <div class = "new_post_text">
+  <%= form.label :text %>
+   <%= form.text_area :text %>
+     </div>
+  <div class = "btn_new_post">
+  <%= form.submit class: 'btn_create_post' %>
+  </div>
+ <% end %>
+</div>
+</div>

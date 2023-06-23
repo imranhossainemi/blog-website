@@ -1,0 +1,12 @@
+<div class = 'new_comment'>
+<h2>Create New Comment</h2>
+<%= form_with model: @comment do |form| %>
+<div class = "comment_text">
+   <%= form.label :text %>
+  <%= form.text_area :text %>
+  </div>
+  <div class = "btn_create_new_comment">
+   <%= form.submit class: 'btn_create_comment'%>
+<% end %>
+</div>
+</div>

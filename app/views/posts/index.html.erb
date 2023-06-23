@@ -1,5 +1,6 @@
 <div class = 'post'>
 <h2> All Posts</h2>
+<%= flash[:notice]%>
 <div class = 'post_container'>
 <div class = 'user_row'>
     <div class = 'user_image'>
@@ -9,16 +10,23 @@
 <p>Number of Posts = <%=@user.posts_counter %></p>
 </div>
 </div>
+<%if @current_user.id == @user.id %>
+<button class = 'btn_add_new_post'><%= link_to 'Add new Post', new_post_path%></button>
+<%end%>
 <% @posts.each do |post| %>
 <div class = 'user_posts'>
 <h3> <%= link_to post.title, post_path(post) %></h3>
 <p> <%= post.text %><p>
 <p class = 'counters'> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
 </div>
+<%if post.comments_counter > 0 %>
 <div class = 'post_comments'>
  <% post.recent_comments.each do |comment|%>
 <p><%= comment.author.name%>: <%= comment.text %></p>
 <% end %>
+<%else%>
+<div class = "post_comments"> No Comments</div>
+<%end%>
 </div>
 <% end %>
 

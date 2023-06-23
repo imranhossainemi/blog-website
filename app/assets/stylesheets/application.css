@@ -10,7 +10,10 @@ h2 {
 
 a:link,
 a:active,
-a:visited {
+a:visited,
+.btn_add_likes,
+.btn_create_post,
+.btn_create_comment {
   color: #ff1414;
   text-decoration: none;
   font-size: 1.5rem;
@@ -26,14 +29,17 @@ a:visited {
 .post_row,
 .user_block,
 .button,
-.counters {
+.counters,
+.btn_comment_like,
+.new_comment {
   display: flex;
 }
 
 .user_container,
 .user_row,
 .post_container,
-.post_row {
+.post_row,
+.btn_comment_like {
   gap: 1.5rem;
 }
 
@@ -42,7 +48,13 @@ a:visited {
 .user_posts,
 .user_row,
 .post_comments,
-.home {
+.home,
+.btn_add_new_post,
+.btn_add_comment,
+.back_to_posts,
+.add_new_post,
+.btn_create_comment,
+.comment_text {
   margin-left: 5%;
 }
 
@@ -51,7 +63,9 @@ a:visited {
 }
 
 .user,
-.post {
+.post,
+.add_new_post,
+.new_comment {
   flex-direction: column;
 }
 
@@ -64,7 +78,8 @@ a:visited {
 .user_block,
 .user_bio,
 .user_posts,
-.post_comments {
+.post_comments,
+.no_comments {
   border: 1px solid #000;
   padding: 1rem 1rem;
   width: 80%;
@@ -78,7 +93,14 @@ p,
 .user_bio,
 .user_posts,
 .button,
-.post_comments {
+.post_comments,
+.btn_comment_like,
+.back_to_posts,
+.add_new_post,
+.new_post_text,
+.btn_new_post,
+.btn_create_comment,
+.comment_text {
   margin-top: 3%;
 }
 

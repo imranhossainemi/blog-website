@@ -1,1 +1,25 @@
-<h1> Single user details</h1>
+<div class = 'user'>
+<h2> User Details</h2>
+<div class = 'user_container'>
+<div class = 'user_row'>
+    <div class = 'user_image'>
+    </div>
+<div class = 'user_block'>
+<h3><%= @user.name %></h3>
+<p>Number of Posts = <%=@user.posts_counter %></p>
+</div>
+</div>
+<div class = 'user_bio'>
+<h3>Bio</h3>
+<p> <%= @user.bio %> </p>
+</div>
+<% @recent_posts.each do |post| %>
+<div class = 'user_posts'>
+<h3>Post # <%= post.title %></h3>
+<p><%= post.text %><p>
+<p class = 'counters'> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+</div>
+<% end %>
+ <div class = 'button' ><%=link_to 'See All Posts',  posts_path(@user) %> </div>
+</div>
+</div>

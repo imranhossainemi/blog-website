@@ -2,8 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.', posts_counter: 0)
-  post = Post.new(author: user, title: 'post1', text: 'This is my first Post', comments_counter: 0, likes_counter: 0)
-  post1 = Post.new(author: user,
+  post = Post.new
+  post.(author: user, title: 'post1', text: 'This is my first Post', comments_counter: 0, likes_counter: 0)
+  post1 = Post.new
+  post1.(author: user,
                    title: 'Testing Testing Testing Testing Testing Testing Testing Testing
                    Testing Testing Testing Testing Testing Testing Testing Testing Testing
                    Testing Testing Testing Testing Testing Testing Testing Testing Testing

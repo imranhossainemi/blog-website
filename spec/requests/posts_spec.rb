@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   describe 'GET Posts/index' do
     before(:each) do
-      get '/users/1/posts'
+      get '/users/3/posts'
     end
 
     it 'http_status' do
@@ -11,7 +11,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'Text of a page rendered' do
-      expect(response.body).to include('Posts#index')
+      expect(response.body).to include('All Posts')
     end
 
     it 'Response status' do
@@ -27,7 +27,7 @@ end
 RSpec.describe 'Posts', type: :request do
   describe 'GET Posts/show' do
     before(:each) do
-      get '/users/1/posts/1'
+      get '/users/3/posts/10'
     end
 
     it 'Show http_status' do
@@ -35,7 +35,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'Show page text' do
-      expect(response.body).to include('Posts#show')
+      expect(response.body).to include('Single Post Details')
     end
 
     it 'Show Response status' do

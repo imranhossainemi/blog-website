@@ -54,7 +54,8 @@ a:visited,
 .back_to_posts,
 .add_new_post,
 .btn_create_comment,
-.comment_text {
+.comment_text,
+.pagination {
   margin-left: 5%;
 }
 
@@ -100,7 +101,8 @@ p,
 .new_post_text,
 .btn_new_post,
 .btn_create_comment,
-.comment_text {
+.comment_text,
+.pagination {
   margin-top: 3%;
 }
 

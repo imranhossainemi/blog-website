@@ -9,8 +9,6 @@ gem 'rspec-rails'
 
 gem 'pagy'
 
-gem 'capybara'
-
 gem 'rails-controller-testing'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

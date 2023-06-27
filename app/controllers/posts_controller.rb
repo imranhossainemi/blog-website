@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @user = User.includes(post: [:author, { comments: [:author] }]).find(params[:id])
+    @user = User.includes(posts: [:author, { comments: [:author] }]).find(params[:id])
     @pagy, @posts = pagy(@user.posts, items: 4)
     @current_user = current_user
   end

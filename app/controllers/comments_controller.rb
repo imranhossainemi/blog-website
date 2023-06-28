@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    puts 'Dheeraj'
+    puts 'Imran'
     @post = Post.find(params[:id])
     @comment = @post.comments.new(author: current_user, **comment_params)
     puts @comment

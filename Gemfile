@@ -9,6 +9,8 @@ gem 'rspec-rails'
 
 gem 'pagy'
 
+gem 'devise'
+
 gem 'capybara'
 
 gem 'rails-controller-testing'

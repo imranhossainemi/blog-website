@@ -3,7 +3,8 @@
 <%= flash[:notice]%>
 <div class = 'post_container'>
 <div class = 'user_row'>
-    <div class = 'user_image'>
+    <div class = 'user_image_section'>
+    <img class  = "user_image" src="<%= @user.photo %>" alt="profile">
     </div>
 <div class = 'user_block'>
 <h3><%= @user.name %></h3>
@@ -15,7 +16,7 @@
 <%end%>
 <% @posts.each do |post| %>
 <div class = 'user_posts'>
-<h3> <%= link_to post.title, post_path(post) %></h3>
+<h3> <%= link_to post.title, user_post_path(post.author, post) %></h3>
 <p> <%= post.text %><p>
 <p class = 'counters'> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
 </div>
@@ -30,5 +31,8 @@
 </div>
 <% end %>
 
+</div>
+<div class = 'pagination'>
+<%== pagy_nav(@pagy).html_safe %>
 </div>
 </div>

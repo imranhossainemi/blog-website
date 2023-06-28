@@ -27,7 +27,7 @@ end
 RSpec.describe 'Users', type: :request do
   describe 'GET Users/ID' do
     before(:each) do
-      get '/users/1'
+      get '/users/3'
     end
 
     it 'Show http_status' do
@@ -35,7 +35,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'Show page text' do
-      expect(response.body).to include('Single')
+      expect(response.body).to include('User')
     end
 
     it 'Show Response status' do

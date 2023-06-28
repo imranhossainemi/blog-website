@@ -7,6 +7,7 @@ class Like < ApplicationRecord
   def update_likes_counter
     post.increment!(:likes_counter)
   end
+
   def create
     post = Post.find(params[:id])
     @like = post.likes.new(author: current_user)

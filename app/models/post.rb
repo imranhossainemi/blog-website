@@ -15,6 +15,7 @@ class Post < ApplicationRecord
   def recent_comments
     comments.order(created_at: :desc).limit(5)
   end
+
   def index
     @user = User.find(params[:id])
     @posts = @user.posts

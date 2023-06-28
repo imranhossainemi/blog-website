@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: blog_website_dev
+  database: blog_website_dev_old
   username: postgres
   password: emi
 
@@ -59,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: blog_website_test
+  database: blog_website_test_old
   username: postgres
   password: emi
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: blog
+  database: blog_old
   username: postgres
   password: emi

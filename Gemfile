@@ -11,7 +11,7 @@ gem 'pagy'
 
 gem 'devise'
 
- gem 'cancancan', '~> 3.5'
+gem 'cancancan', '~> 3.5'
 
 gem 'rails-controller-testing'
 

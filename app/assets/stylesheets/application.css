@@ -167,20 +167,18 @@ p,
 }
 
 .login .field {
-  
   margin: 25px;
 }
 
-.login .field>input,
-.login .actions>input {
+.login .field > input,
+.login .actions > input {
   padding: 20px 50px;
   font: 1em sans-serif;
 }
 
-
-.login .actions>input:hover {
+.login .actions > input:hover {
   background-color: hsl(209, 93%, 48%);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .login .actions {

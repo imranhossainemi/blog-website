@@ -1,4 +1,8 @@
+require 'cancancan'
+
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.includes(posts: [:author, { comments: [:author] }]).find(params[:id])
     @pagy, @posts = pagy(@user.posts, items: 4)
@@ -23,6 +27,12 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path(current_user), notice: 'Post Deleted Successfully'
   end
 
   private

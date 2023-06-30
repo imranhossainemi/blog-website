@@ -156,3 +156,35 @@ p,
   display: flex;
   justify-content: center;
 }
+
+.login {
+  max-width: 1440px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login .field {
+  
+  margin: 25px;
+}
+
+.login .field>input,
+.login .actions>input {
+  padding: 20px 50px;
+  font: 1em sans-serif;
+}
+
+
+.login .actions>input:hover {
+  background-color: hsl(209, 93%, 48%);
+  cursor:pointer;
+}
+
+.login .actions {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}

@@ -108,7 +108,7 @@ config/database.yml file to contain the username/password that you specified
   <li>rails server</li>
 </ul>
 
-### Run tests
+### Run_tests
 
 To run tests, run the following command: Install through : gem install rspec
 

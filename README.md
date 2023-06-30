@@ -15,6 +15,9 @@
   - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Install](#Install)
+  - [Usage](#Usage)
+  - [Run_tests](#tests)
   - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -105,7 +108,7 @@ config/database.yml file to contain the username/password that you specified
   <li>rails server</li>
 </ul>
 
-### Run tests
+### Run_tests <a name="tests"></a>
 
 To run tests, run the following command: Install through : gem install rspec
 
@@ -113,7 +116,7 @@ Run: rspec to tun tests
 
 <p align="right">(<a href="#readme-top"></a>)</p>
 
-## 👤 Author <a href="#authors"></a>
+## 👤 Author <a name="authors"></a>
 
 **Imran Hossain**
 

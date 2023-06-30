@@ -113,7 +113,7 @@ Run: rspec to tun tests
 
 <p align="right">(<a href="#readme-top"></a>)</p>
 
-## 👤 Author <a href="#authors"></a>
+## 👤 Author <a name="authors"></a>
 
 **Imran Hossain**
 

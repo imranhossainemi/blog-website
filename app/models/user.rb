@@ -2,8 +2,6 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
   has_many :posts, class_name: 'Post', foreign_key: :author_id, dependent: :destroy
@@ -16,12 +14,7 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).limit(3)
   end
 
-  def index
-    @users = User.all
-  end
-
-  def show
-    @user = User.find(params[:id])
-    @recent_posts = @user.three_recent_posts
+  def admin?
+    role == 'admin'
   end
 end

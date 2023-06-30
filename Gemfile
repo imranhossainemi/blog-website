@@ -11,6 +11,8 @@ gem 'pagy'
 
 gem 'devise'
 
+ gem 'cancancan', '~> 3.5'
+
 gem 'rails-controller-testing'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

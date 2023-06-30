@@ -17,7 +17,7 @@
   - [Prerequisites](#prerequisites)
   - [Install](#Install)
   - [Usage](#Usage)
-  - [Run_tests](#Run_tests)
+  - [Run_tests](#tests)
   - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -114,7 +114,7 @@ To run tests, run the following command: Install through : gem install rspec
 
 Run: rspec to tun tests
 
-<p align="right">(<a href="#readme-top"></a>)</p>
+<p align="right">(<a href="#readme-top">top</a>)</p>
 
 ## 👤 Author <a name="authors"></a>
 

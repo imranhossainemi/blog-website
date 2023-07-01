@@ -11,9 +11,7 @@ gem 'pagy'
 
 gem 'devise'
 
-gem 'devise-jwt'
-
-gem 'cancancan', '~> 3.5'
+ gem 'cancancan', '~> 3.5'
 
 gem 'rails-controller-testing'
 

@@ -156,3 +156,33 @@ p,
   display: flex;
   justify-content: center;
 }
+
+.sec {
+  max-width: 1440px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sec .field {
+  margin: 25px;
+}
+
+.sec .field > input,
+.sec .actions > input {
+  padding: 20px 50px;
+  font: 1em sans-serif;
+}
+
+.sec .actions > input:hover {
+  background-color: hsl(209, 93%, 48%);
+  cursor: pointer;
+}
+
+.sec .actions {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}

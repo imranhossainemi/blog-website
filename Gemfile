@@ -10,7 +10,10 @@ gem 'rspec-rails'
 gem 'pagy'
 
 gem 'devise'
-
+gem 'rswag'
+gem 'rswag-api'
+gem 'rswag-ui'
+gem 'devise-jwt'
 gem 'cancancan', '~> 3.5'
 
 gem 'rails-controller-testing'
@@ -81,4 +84,8 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+end
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'rswag-specs'
 end

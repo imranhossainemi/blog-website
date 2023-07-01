@@ -13,11 +13,21 @@
 <%= form_with model: @likes do |form| %>
       <%= form.submit "Add Likes", class: 'btn_add_likes' %>
 <% end %>
+<% if can? :destroy, @post%>
+      <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}" , method: :delete do |f|%>
+        <%= f.submit 'Delete' %>
+      <%end%>
+    <%end%>
 </div>
 <%if @post.comments_counter > 0 %>
 <div class = 'post_comments'>
  <% @post.comments.each do |comment| %>
  <p><%= comment.author.name%>: <%= comment.text%></p>
+ <% if can? :destroy, comment%>
+      <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/comments/#{comment.id}" , method: :delete do |f|%>
+        <%= f.submit 'Delete' %>
+      <%end%>
+    <%end%>
 <%end%>
 <%else%>
 <div class = "post_comments"> No Comments</div>

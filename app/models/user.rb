@@ -14,12 +14,7 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).limit(3)
   end
 
-  def index
-    @users = User.all
-  end
-
-  def show
-    @user = User.find(params[:id])
-    @recent_posts = @user.three_recent_posts
+  def admin?
+    role == 'admin'
   end
 end

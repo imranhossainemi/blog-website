@@ -8,7 +8,7 @@
     </div>
 <div class = 'user_block'>
 <h3><%= @user.name %></h3>
-<p>Number of Posts = <%=@user.posts_counter %></p>
+<p>Number of Posts = <%=@user.posts.count %></p>
 </div>
 </div>
 <%if @current_user.id == @user.id %>
@@ -20,6 +20,11 @@
 <p> <%= post.text %><p>
 <p class = 'counters'> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
 </div>
+<% if can? :destroy, post%>
+      <%= form_with url: "/users/#{@user.id}/posts/#{post.id}" , method: :delete do |f|%>
+        <%= f.submit 'Delete' %>
+      <%end%>
+    <%end%>
 <%if post.comments_counter > 0 %>
 <div class = 'post_comments'>
  <% post.recent_comments.each do |comment|%>

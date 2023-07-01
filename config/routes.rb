@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [] do
+        resources :posts, only: [:index] do
+          resources :comments, only: [:index, :create]
+        end
+      end
+    end
+  end
   devise_for :users
   root 'users#index'
 
@@ -14,3 +23,4 @@ Rails.application.routes.draw do
   delete "/users/:user_id/posts/:id", to: "posts#destroy"
   delete "/users/:user_id/posts/:id/comments/:id", to: "comments#destroy"
 end
+

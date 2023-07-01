@@ -70,7 +70,8 @@ a:visited,
   flex-direction: column;
 }
 
-.user_image {
+.user_image,
+.user_image_section {
   width: 70px;
   height: 70px;
   border: 1px solid #a70000;
@@ -124,4 +125,64 @@ p,
 
 .counters {
   justify-content: right;
+}
+
+.devise_container,
+.devise_container label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.devise_container a {
+  padding: 1px 2px;
+  border: 2px solid black;
+  margin-bottom: 4px;
+}
+
+.devise_container h2 {
+  margin-bottom: 3%;
+}
+
+.devise_container .field {
+  width: 100%;
+}
+
+.devise_container input {
+  width: 70vw;
+  margin-bottom: 20px;
+  padding: 3px 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.sec {
+  max-width: 1440px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sec .field {
+  margin: 25px;
+}
+
+.sec .field > input,
+.sec .actions > input {
+  padding: 20px 50px;
+  font: 1em sans-serif;
+}
+
+.sec .actions > input:hover {
+  background-color: hsl(209, 93%, 48%);
+  cursor: pointer;
+}
+
+.sec .actions {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
 }

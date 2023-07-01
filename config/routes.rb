@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'users#index'
-
   get "/users/:id/posts", to: "posts#index", as: 'posts'
   get "/users/:id/posts/new", to: "posts#new", as: 'new_post'
   post "/users/:id/posts", to: "posts#create" 

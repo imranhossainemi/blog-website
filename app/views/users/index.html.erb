@@ -1,5 +1,8 @@
 <div class = 'user'>
-<h1> Welcome to Users List</h1>
+<div style="display: flex; justify-content: flex-end; margin-right: 50px;">
+  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+</div>
+<h1>Welcome <%= @user.name%> </h1>
 <div class = 'user_container'>
 <% @users.each do |user|%>
 <div class = 'user_row'>
@@ -8,7 +11,7 @@
 </div>
 <div class = 'user_block'>
 <h3 id = "user_link"><%= link_to user.name, user_path(user)  %></h3>
-<p>Number of Posts = <%=user.posts_counter %></p>
+<p>Number of Posts = <%=user.posts.count %></p>
 </div>
 </div>
 <% end %>

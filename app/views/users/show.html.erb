@@ -14,7 +14,6 @@
       <h3>Bio</h3>
       <p> <%= @user.bio %> </p>
     </div>
-
     <% @user.three_recent_posts.each do |post| %>
       <%= link_to user_post_path(post.author, post) do%>
         <div class = 'user_posts'>

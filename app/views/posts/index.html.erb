@@ -1,43 +1,42 @@
 <div class = 'post'>
-<h2> All Posts</h2>
-<%= flash[:notice]%>
-<div class = 'post_container'>
-<div class = 'user_row'>
-    <div class = 'user_image_section'>
-    <img class  = "user_image" src="<%= @user.photo %>" alt="profile">
+  <h2> All Posts</h2>
+  <%= flash[:notice]%>
+  <div class = 'post_container'>
+    <div class = 'user_row'>
+      <div class = 'user_image_section'>
+        <img class  = "user_image" src="<%= @user.photo %>" alt="profile">
+      </div>
+      <div class = 'user_block'>
+        <h3><%= @user.name %></h3>
+        <p>Number of Posts = <%=@user.posts.count %></p>
+      </div>
     </div>
-<div class = 'user_block'>
-<h3><%= @user.name %></h3>
-<p>Number of Posts = <%=@user.posts.count %></p>
-</div>
-</div>
-<%if @current_user.id == @user.id %>
-<button class = 'btn_add_new_post'><%= link_to 'Add new Post', new_post_path%></button>
-<%end%>
-<% @posts.each do |post| %>
-<div class = 'user_posts'>
-<h3> <%= link_to post.title, user_post_path(post.author, post) %></h3>
-<p> <%= post.text %><p>
-<p class = 'counters'> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
-</div>
-<% if can? :destroy, post%>
-      <%= form_with url: "/users/#{@user.id}/posts/#{post.id}" , method: :delete do |f|%>
-        <%= f.submit 'Delete' %>
-      <%end%>
+    <%if @current_user.id == @user.id %>
+      <button class = 'btn_add_new_post'><%= link_to 'Add new Post', new_post_path%></button>
     <%end%>
-<%if post.comments_counter > 0 %>
-<div class = 'post_comments'>
- <% post.recent_comments.each do |comment|%>
-<p><%= comment.author.name%>: <%= comment.text %></p>
-<% end %>
-<%else%>
-<div class = "post_comments"> No Comments</div>
-<%end%>
-</div>
-<% end %>
-
-</div>
-<div class = 'pagination'>
-<%== pagy_nav(@pagy).html_safe %>
-</div>
+    <% @posts.each do |post| %>
+      <div class = 'user_posts'>
+        <h3> <%= link_to post.title, user_post_path(post.author, post) %></h3>
+        <p> <%= post.text %><p>
+        <p class = 'counters'> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+      </div>
+      <% if can? :destroy, post%>
+        <%= form_with url: "/users/#{@user.id}/posts/#{post.id}" , method: :delete do |f|%>
+          <%= f.submit 'Delete' %>
+        <%end%>
+      <%end%>
+      <div class = 'post_comments'>
+        <%if post.comments_counter > 0 %>    
+          <% post.recent_comments.each do |comment|%>
+          <p><%= comment.author.name%>: <%= comment.text %></p>
+        <% end %>
+        <%else%>
+          <h3 class = "post_comments"> No Comments</h3>
+        <%end%>
+      </div>
+    <% end %>
+  </div><%# end post container %>
+  <div class = 'pagination'>
+    <%== pagy_nav(@pagy).html_safe %>
+  </div>
 </div>
